@@ -1,0 +1,43 @@
+[package]
+name = "libsrtp"
+version = "0.1.0"
+edition = "2024"
+authors = ["Johan Pascal <jeannolapin@laposte.net>"]
+
+description = "a pure rust implementation of SRTP"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+documentation = "https://docs.rs/libsrtp"
+repository = "https://github.com/jeannotlapin/libsrtp-rs"
+homepage = "https://github.com/jeannotlapin/libsrtp-rs/tree/master/libsrtp"
+
+keywords = [
+    "srtp",
+    "media-stream",
+    "encryption",
+    "authentication",
+    "real-time",
+]
+categories = [
+    "cryptography",
+    "network-programming",
+    "multimedia",
+]
+
+[badges]
+maintenance = { status = "experimental" }
+
+[dependencies]
+aes = "0.8"
+aes-gcm = "0.10.3"
+constant_time_eq = "0.4.2"
+ctr = "0.9"
+hmac = "0.12.1"
+num-bigint = "0.4.6"
+num-traits = "0.2.19"
+sha1 = "0.10.6"
+zeroize = {version = "1.8.1", features = ["zeroize_derive"]}
+
+[dev-dependencies]
+anyhow = "1.0.99"
+test_utils = { path = "../test_utils" }

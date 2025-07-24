@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = [
+    "libsrtp",
+    "interop_test",
+    "test_utils",
+]
+
+# interop test not build by default as it may requires some tweak in its build.rs
+default-members = [
+    "libsrtp",
+]

@@ -1,0 +1,19 @@
+[package]
+name = "interop_test"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+libsrtp = { path = "../libsrtp" }
+
+[dev-dependencies]
+anyhow = "1.0.99"
+serial_test = "3.2.0"
+test_utils = { path = "../test_utils" }
+
+[lib]
+crate-type = ["staticlib", "rlib"]
+
+[build-dependencies]
+cc = "1.2.32"
